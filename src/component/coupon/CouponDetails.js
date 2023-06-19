@@ -111,8 +111,11 @@ const CouponDetails = ({ coupon }) => {
               <p className="text-xs leading-5 text-gray-500 mt-2">
                 * This coupon code apply when you shopping more then{" "}
                 <span className="font-medium">
-                  {currency}
-                  {coupon.minimumAmount}
+                  {new Intl.NumberFormat({
+                    style: "currency",
+                    currency: "VND",
+                  }).format(coupon.minimumAmount * 23000)}{" "}
+                  VNĐ
                 </span>{" "}
               </p>
             </div>

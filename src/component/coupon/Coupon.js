@@ -133,8 +133,11 @@ const Coupon = ({ couponInHome }) => {
                   <p className="text-xs leading-4 text-gray-500 mt-2">
                     * This coupon apply when shopping more then{" "}
                     <span className="font-bold">
-                      {currency}
-                      {coupon.minimumAmount}
+                      {new Intl.NumberFormat({
+                        style: "currency",
+                        currency: "VND",
+                      }).format(coupon.minimumAmount * 23000)}{" "}
+                      VNĐ
                     </span>{" "}
                   </p>
                 </div>
@@ -243,8 +246,11 @@ const Coupon = ({ couponInHome }) => {
                   <p className="text-xs leading-5 text-gray-500 mt-2">
                     * This coupon code will apply on when you shopping more then{" "}
                     <span className="font-bold text-gray-700">
-                      {currency}
-                      {coupon.minimumAmount}
+                      {new Intl.NumberFormat({
+                        style: "currency",
+                        currency: "VND",
+                      }).format(coupon.minimumAmount * 23000)}{" "}
+                      VNĐ
                     </span>{" "}
                   </p>
                 </div>
