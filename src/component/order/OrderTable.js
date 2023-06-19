@@ -15,13 +15,15 @@ const OrderTable = ({ data, currency }) => {
             {item.quantity}{" "}
           </td>
           <td className="px-6 py-1 whitespace-nowrap font-bold text-center font-DejaVu">
-            {currency}
+            
             {parseFloat(item.price).toFixed(2)}
+            {currency}
           </td>
 
           <td className="px-6 py-1 whitespace-nowrap text-right font-bold font-DejaVu k-grid text-red-500">
-            {currency}
+            
             {parseFloat(item.itemTotal).toFixed(2)}
+            {currency}
           </td>
         </tr>
       ))}

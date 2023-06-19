@@ -4,6 +4,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import useTranslation from "next-translate/useTranslation";
 import { FacebookIcon, LinkedinIcon, PinterestIcon, TwitterIcon, WhatsappIcon } from "react-share";
+import Logo from "../../component/img/logo.png"
 
 //internal import
 import { UserContext } from "@context/UserContext";
@@ -38,20 +39,6 @@ const Footer = () => {
                   </a>
                 </Link>
               </li>
-              <li className="flex items-baseline">
-                <Link href="#">
-                  <a className="text-gray-600 inline-block w-full hover:text-green-600">
-                    {t("common:footer-careers")}
-                  </a>
-                </Link>
-              </li>
-              <li className="flex items-baseline">
-                <Link href="#">
-                  <a className="text-gray-600 inline-block w-full hover:text-green-600">
-                    {t("common:footer-news")}
-                  </a>
-                </Link>
-              </li>
             </ul>
           </div>
           <div className="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3">
@@ -62,7 +49,7 @@ const Footer = () => {
               <li className="flex items-baseline">
                 <Link href="/search?Category=fish--meat">
                   <a className="text-gray-600 inline-block w-full hover:text-green-600">
-                    {t("common:footer-top-category-fish-meat")}
+                    Trái cây nhập khẩu
                   </a>
                 </Link>
               </li>
@@ -70,21 +57,14 @@ const Footer = () => {
               <li className="flex items-baseline">
                 <Link href="/search?Category=drinks">
                   <a className="text-gray-600 inline-block w-full hover:text-green-600">
-                    {t("common:footer-top-category-soft-drinks")}
+                    Mứt trái cây
                   </a>
                 </Link>
               </li>
               <li className="flex items-baseline">
                 <Link href="search?Category=baby-care">
                   <a className="text-gray-600 inline-block w-full hover:text-green-600">
-                    {t("common:footer-top-category-baby-care")}
-                  </a>
-                </Link>
-              </li>
-              <li className="flex items-baseline">
-                <Link href="search?Category=beauty--health">
-                  <a className="text-gray-600 inline-block w-full hover:text-green-600">
-                    {t("common:footer-top-category-beauty-health")}
+                    Giỏ trái cây
                   </a>
                 </Link>
               </li>
@@ -129,17 +109,17 @@ const Footer = () => {
             <Link href="/">
               <a className="mr-3 lg:mr-12 xl:mr-12" rel="noreferrer">
                 <div className='flex text-green-600'>
-                  <FiSend className='text-3xl' />
-                  <h6 className='ml-2 text-2xl'>MernShop</h6>
+                  <Image src={Logo} />
+                  <h6 className='ml-2 text-2xl'>FreshFruit</h6>
                 </div>
               </a>
             </Link>
             <p className="leading-7 font-sans text-sm text-gray-600 mt-3">
-              <span>{t("common:footer-address")}</span>
+              <span>38 Phan Đình Phùng P8 - TPVL</span>
               <br />
-              <span>{t("common:footer-tell")}</span>
+              <span>+84 9392 62287</span>
               <br />
-              <span>{t("common:footer-email")}</span>
+              <span>FreshFruit@gmail.com</span>
             </p>
           </div>
         </div>
@@ -217,7 +197,7 @@ const Footer = () => {
             </div>
             <div className="col-span-1 text-center hidden lg:block md:block">
               <p className="text-base leading-7 font-medium block">{t("common:footer-call-us")}</p>
-              <h5 className="text-2xl font-bold text-green-600 leading-7">+012345-67900</h5>
+              <h5 className="text-2xl font-bold text-green-600 leading-7">+84 9392 62287</h5>
             </div>
             <div className="col-span-1 hidden lg:block md:block">
               <ul className="lg:text-right">
@@ -238,10 +218,10 @@ const Footer = () => {
 
       <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 flex justify-center py-4">
         <p className="text-sm text-gray-500 leading-6">
-          Copyright 2022 @{" "}
+          Copyright 2023 @ Quynh Tong{" "}
           <Link href="#">
             <a className="text-green-600">
-              MernShop
+              FreshFruit
             </a>
           </Link>
           , All rights reserved.

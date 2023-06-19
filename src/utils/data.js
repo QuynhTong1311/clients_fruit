@@ -174,7 +174,7 @@ const contactData = [
     title: 'contact-page-box1-title',
     info: 'contact-page-box1-info',
     icon: FiMail,
-    contact: 'mernshop@gmail.com',
+    contact: 'FreshFruit@gmail.com',
     className: 'bg-green-100',
   },
   {
@@ -182,7 +182,7 @@ const contactData = [
     title: 'contact-page-box2-title',
     info: 'contact-page-box2-info',
     icon: FiPhoneCall,
-    contact: '029-00124667',
+    contact: '0939262287',
     className: 'bg-yellow-100',
   },
   {
@@ -190,7 +190,7 @@ const contactData = [
     title: 'contact-page-box3-title',
     info: 'contact-page-box3-info',
     icon: FiMapPin,
-    contact: '',
+    contact: '38 Phan Đình Phùng p8 - TPVL',
     className: 'bg-indigo-100',
   },
 ];

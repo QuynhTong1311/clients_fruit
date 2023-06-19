@@ -285,8 +285,7 @@ const InvoiceForDownload = ({ data, currency, globalSetting }) => {
                 MernShop
               </Text>
               <Text style={styles.topAddress}>
-                {globalSetting?.address ||
-                  "Cecilia Chapman, 561-4535 Nulla LA, United States 96522"}
+                {globalSetting?.address || "C38 Phan ĐÌnh Phùng TPVL"}
               </Text>
               {/* <Text style={styles.info}> United States 96522</Text> */}
             </View>

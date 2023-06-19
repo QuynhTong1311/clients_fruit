@@ -165,7 +165,7 @@ const Checkout = () => {
                     <div className="grid grid-cols-6 gap-6">
                       <div className="col-span-6 sm:col-span-3">
                         <InputShipping
-                          currency={currency}
+                          currency="vnd"
                           handleShippingCost={handleShippingCost}
                           register={register}
                           value="FedEx"
@@ -177,7 +177,7 @@ const Checkout = () => {
 
                       <div className="col-span-6 sm:col-span-3">
                         <InputShipping
-                          currency={currency}
+                          currency="vnd"
                           handleShippingCost={handleShippingCost}
                           register={register}
                           value="UPS"
@@ -197,8 +197,6 @@ const Checkout = () => {
                       <div className="mb-3">
                         <CardElement />{" "}
                         <p className="text-red-400 text-sm mt-1">{error}</p>
-
-                      
                       </div>
                     )}
                     <div className="grid grid-cols-6 gap-6">
@@ -326,30 +324,42 @@ const Checkout = () => {
                 <div className="flex items-center py-2 text-sm w-full font-semibold text-gray-500 last:border-b-0 last:text-base last:pb-0">
                   {t("common:subtotal")}
                   <span className="ml-auto flex-shrink-0 text-gray-800 font-bold">
-                    {currency}
-                    {cartTotal?.toFixed(2)}
+                    {new Intl.NumberFormat({
+                      style: "currency",
+                      currency: "VND",
+                    }).format(cartTotal * 23000)}{" "}
+                    VNĐ
                   </span>
                 </div>
                 <div className="flex items-center py-2 text-sm w-full font-semibold text-gray-500 last:border-b-0 last:text-base last:pb-0">
                   {t("common:shippingCost")}
                   <span className="ml-auto flex-shrink-0 text-gray-800 font-bold">
-                    {currency}
-                    {shippingCost.toFixed(2)}
+                    {new Intl.NumberFormat({
+                      style: "currency",
+                      currency: "VND",
+                    }).format(shippingCost * 23000)}{" "}
+                    VNĐ
                   </span>
                 </div>
                 <div className="flex items-center py-2 text-sm w-full font-semibold text-gray-500 last:border-b-0 last:text-base last:pb-0">
                   {t("common:discount")}
                   <span className="ml-auto flex-shrink-0 font-bold text-orange-400">
-                    {currency}
-                    {discountAmount.toFixed(2)}
+                    {new Intl.NumberFormat({
+                      style: "currency",
+                      currency: "VND",
+                    }).format(discountAmount * 23000)}{" "}
+                    VNĐ
                   </span>
                 </div>
                 <div className="border-t mt-4">
                   <div className="flex items-center font-bold font-serif justify-between pt-5 text-sm uppercase">
                     {t("common:totalCost")}
                     <span className="font-serif font-extrabold text-lg">
-                      {currency}
-                      {parseFloat(total).toFixed(2)}
+                      {new Intl.NumberFormat({
+                        style: "currency",
+                        currency: "VND",
+                      }).format(total * 23000)}{" "}
+                      VNĐ
                     </span>
                   </div>
                 </div>

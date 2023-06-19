@@ -25,8 +25,8 @@ const InputShipping = ({
                 <p className="text-xs text-gray-500 font-medium">
                   Delivery: {time}{" "}
                   <span className="font-medium text-gray-600">
-                    Cost :{currency}
-                    {cost}.00
+                    Cost :{cost}{currency}
+                    
                   </span>
                 </p>
               </div>

@@ -33,13 +33,21 @@ const CartItem = ({ item, currency }) => {
           </a>
         </Link>
         <span className="text-xs text-gray-400 mb-1">
-          Item Price ${item.price}
+          Item Price{" "}
+          {new Intl.NumberFormat({
+            style: "currency",
+            currency: "VND",
+          }).format(item.price * 23000)}{" "}
+          VNĐ
         </span>
         <div className="flex items-center justify-between">
           <div className="font-bold text-sm md:text-base text-heading leading-5">
             <span>
-              {currency}
-              {(item.price * item.quantity).toFixed(2)}
+              {new Intl.NumberFormat({
+                style: "currency",
+                currency: "VND",
+              }).format(item.price * item.quantity * 23000)}{" "}
+              VNĐ
             </span>
           </div>
           <div className="h-8 w-22 md:w-24 lg:w-24 flex flex-wrap items-center justify-evenly p-1 border border-gray-100 bg-white text-gray-600 rounded-md">

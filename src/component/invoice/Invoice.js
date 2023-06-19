@@ -49,7 +49,7 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
             </h2>
             <p className="text-sm text-gray-500">
               {globalSetting?.address ||
-                "Cecilia Chapman, 561-4535 Nulla LA, <br /> United States 96522"}
+                "38 Phan Đình Phùng P8 - TPVL "}
             </p>
           </div>
         </div>
@@ -166,8 +166,11 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
               Total Amount
             </span>
             <span className="text-2xl font-serif font-bold text-red-500 block">
-              {currency}
-              {parseFloat(data.total).toFixed(2)}
+              {new Intl.NumberFormat({
+                style: "currency",
+                currency: "VND",
+              }).format((data.total) * 23000)}{" "}
+              VNĐ
             </span>
           </div>
         </div>

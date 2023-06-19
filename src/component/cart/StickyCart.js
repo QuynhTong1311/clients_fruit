@@ -27,8 +27,11 @@ const StickyCart = () => {
           </span>
         </div>
         <div className="flex flex-col items-center justify-center bg-green-700 p-2 text-white text-base font-serif font-medium rounded-b-lg mx-auto">
-          {currency}
-          {cartTotal.toFixed(2)}
+          {new Intl.NumberFormat({
+            style: "currency",
+            currency: "VND",
+          }).format(cartTotal * 23000)}{" "}
+          VNĐ
         </div>
       </div>
     </button>

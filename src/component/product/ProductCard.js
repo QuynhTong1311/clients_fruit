@@ -107,7 +107,7 @@ const ProductCard = ({ product, attributes }) => {
             <Price
               card
               product={product}
-              currency={currency}
+              currency="VND"
               price={product.prices.price}
               originalPrice={product?.prices?.originalPrice}
             />

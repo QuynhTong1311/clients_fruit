@@ -11,8 +11,11 @@ const Price = ({ product, price, card, currency, originalPrice }) => {
                 : "inline-block text-xl"
             }
           >
-            {currency}
-            {price}
+            {new Intl.NumberFormat({
+              style: "currency",
+              currency: "VND",
+            }).format(price * 23000)}{" "}
+            VNĐ
           </span>
           {originalPrice > price && !card ? (
             <>
@@ -23,8 +26,11 @@ const Price = ({ product, price, card, currency, originalPrice }) => {
                     : "text-md font-normal text-gray-400 ml-1"
                 }
               >
-                {currency}
-                {parseFloat(originalPrice).toFixed(2)}
+                {new Intl.NumberFormat({
+                  style: "currency",
+                  currency: "VND",
+                }).format(originalPrice * 23000)}{" "}
+                VNĐ
               </del>
             </>
           ) : null}
@@ -38,8 +44,11 @@ const Price = ({ product, price, card, currency, originalPrice }) => {
                 : "inline-block text-xl"
             }
           >
-            {currency}
-            {product?.prices?.price}
+            {new Intl.NumberFormat({
+              style: "currency",
+              currency: "VND",
+            }).format(product?.prices?.price * 23000)}{" "}
+            VNĐ
           </span>
           {originalPrice > price && card ? (
             <>
@@ -50,8 +59,11 @@ const Price = ({ product, price, card, currency, originalPrice }) => {
                     : "text-md font-normal text-gray-400 ml-1"
                 }
               >
-                {currency}
-                {parseFloat(originalPrice).toFixed(2)}
+                {new Intl.NumberFormat({
+                  style: "currency",
+                  currency: "VND",
+                }).format(originalPrice * 23000)}{" "}
+                VNĐ
               </del>
             </>
           ) : null}

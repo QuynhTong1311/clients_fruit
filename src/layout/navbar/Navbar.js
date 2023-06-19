@@ -9,6 +9,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import { FiShoppingCart, FiUser, FiBell, FiSend, FiHeart } from "react-icons/fi";
 import { BiGitCompare } from "react-icons/bi";
 import useTranslation from "next-translate/useTranslation";
+import Logo from "../../component/img/logo.png"
 
 //internal import
 import NavbarPromo from "@layout/navbar/NavbarPromo";
@@ -59,8 +60,8 @@ const Navbar = () => {
             <Link href="/">
               <a className="mr-3 lg:mr-12 xl:mr-12 hidden md:hidden lg:block text-white">
                 <div className='ml-6 flex text-white cursor-pointer'>
-                  <FiSend className='text-3xl' />
-                  <h6 className='ml-2 text-2xl'>MernShop</h6>
+                  <Image src={Logo}/>
+                  <h6 className='ml-2 text-2xl pt-4 font-mono'>FreshFruit</h6>
                 </div>
               </a>
             </Link>

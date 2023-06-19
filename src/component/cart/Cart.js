@@ -41,8 +41,11 @@ const Cart = () => {
         Proceed To Checkout
       </span>
       <span className="rounded-lg font-bold font-serif py-2 px-3 bg-white text-green-600">
-        {currency}
-        {cartTotal.toFixed(2)}
+        {new Intl.NumberFormat({
+          style: "currency",
+          currency: "VND",
+        }).format(cartTotal * 23000)}{" "}
+        VNĐ
       </span>
     </button>
   );
