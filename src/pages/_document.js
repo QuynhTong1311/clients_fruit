@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -23,6 +23,16 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <script>{`
+          var chatbox = document.getElementById('fb-customer-chat');
+          chatbox.setAttribute("page_id", "107771938626773");
+          chatbox.setAttribute("attribution", "biz_inbox");
+        `}</script>
+          <script
+            src="https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js"
+            async
+            defer
+          ></script>
         </body>
       </Html>
     );
