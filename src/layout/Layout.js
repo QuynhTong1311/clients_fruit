@@ -15,6 +15,14 @@ const Layout = ({ title, description, children }) => {
   return (
     <>
       <ToastContainer />
+      <FacebookProvider appId="107771938626773">
+        <Like
+          href="http://www.facebook.com"
+          colorScheme="dark"
+          showFaces
+          share
+        />
+      </FacebookProvider>
       <div className="font-sans">
         <Head>
           <title>
@@ -51,14 +59,6 @@ const Layout = ({ title, description, children }) => {
             <Footer />
           </div>
         </div>
-        <FacebookProvider appId="107771938626773">
-          <Like
-            href="http://www.facebook.com"
-            colorScheme="dark"
-            showFaces
-            share
-          />
-        </FacebookProvider>
       </div>
     </>
   );
