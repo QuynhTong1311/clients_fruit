@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { ToastContainer } from "react-toastify";
-
+import { React, useEffect } from "react";
 //internal import
 import Navbar from "@layout/navbar/Navbar";
 import Footer from "@layout/footer/Footer";
@@ -10,6 +10,26 @@ import FeatureCard from "@component/feature-card/FeatureCard";
 import NavBarTop from "./navbar/NavBarTop";
 
 const Layout = ({ title, description, children }) => {
+   useEffect(() => {
+    const script1 = document.createElement('script');
+    script1.innerHTML = `
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "107771938626773");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    `;
+    document.head.appendChild(script1);
+
+    const script2 = document.createElement('script');
+    script2.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+    script2.async = true;
+    script2.defer = true;
+    document.head.appendChild(script2);
+
+    return () => {
+      document.head.removeChild(script1);
+      document.head.removeChild(script2);
+    };
+  }, []);
   return (
     <>
       <ToastContainer />
