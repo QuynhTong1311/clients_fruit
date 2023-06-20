@@ -23,6 +23,16 @@ const Layout = ({ title, description, children }) => {
           </title>
           {description && <meta name="description" content={description} />}
           <link ref="icon" href="/favicon.png" />
+          <script>{`
+          var chatbox = document.getElementById('fb-customer-chat');
+          chatbox.setAttribute("page_id", "107771938626773");
+          chatbox.setAttribute("attribution", "biz_inbox");
+        `}</script>
+          <script
+            src="https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js"
+            async
+            defer
+          ></script>
         </Head>
         <Helmet>
           <script>{`
