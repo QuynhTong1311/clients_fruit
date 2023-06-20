@@ -9,7 +9,7 @@ import { UserProvider } from "@context/UserContext";
 import DefaultSeo from "@component/common/DefaultSeo";
 import { SidebarProvider } from "@context/SidebarContext";
 const stripePromise = getStripe();
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("fb-root"));
 
 function MyApp({ Component, pageProps }) {
   return (
