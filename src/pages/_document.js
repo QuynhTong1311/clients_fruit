@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -12,7 +12,7 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.png" />
           <meta
             property="og:title"
-            content="MernShop - React Store e-commerce Template"
+            content="FreshFruit - React Store e-commerce Template"
           />
           <meta property="og:type" content="eCommerce Website" />
           <meta

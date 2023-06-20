@@ -1,7 +1,7 @@
 {
   "name": "store",
   "version": "0.1.0",
-  "description": "this is mernshop built with next.js and tailwindcss",
+  "description": "this is FreshFruit built with next.js and tailwindcss",
   "private": true,
   "scripts": {
     "dev": "next dev",
