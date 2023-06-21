@@ -3,7 +3,6 @@ import { CartProvider } from "react-use-cart";
 import { Elements } from "@stripe/react-stripe-js";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
-//internal import
 import getStripe from "@utils/stripe";
 import { UserProvider } from "@context/UserContext";
 import DefaultSeo from "@component/common/DefaultSeo";
