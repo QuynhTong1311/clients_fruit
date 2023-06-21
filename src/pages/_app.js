@@ -9,7 +9,6 @@ import { UserProvider } from "@context/UserContext";
 import DefaultSeo from "@component/common/DefaultSeo";
 import { SidebarProvider } from "@context/SidebarContext";
 const stripePromise = getStripe();
-const root = ReactDOM.createRoot(document.getElementById("fb-root"));
 import { FacebookProvider, Like } from "react-facebook";
 
 function MyApp({ Component, pageProps }) {
@@ -29,9 +28,9 @@ function MyApp({ Component, pageProps }) {
             <Elements stripe={stripePromise}>
               <CartProvider>
                 <DefaultSeo />
-                root.render(
+               
                 <Component {...pageProps} />
-                );
+              
               </CartProvider>
             </Elements>
           </SidebarProvider>
