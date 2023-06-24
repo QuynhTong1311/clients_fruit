@@ -145,9 +145,9 @@ const Home = ({ popularProducts, discountProducts, attributes }) => {
                     All Brand Products for Daily Shopping
                   </h2>
                   <p className="text-base font-sans text-gray-600 leading-6">
-                    See all our popular brand products in this week. You can choose your
-                    daily needs products from this list and get some special offer
-                    with free shipping.
+                    See all our popular brand products in this week. You can
+                    choose your daily needs products from this list and get some
+                    special offer with free shipping.
                   </p>
                 </div>
               </div>
@@ -161,7 +161,6 @@ const Home = ({ popularProducts, discountProducts, attributes }) => {
                 </div>
               </div>
             </div>
-
           </div>
         </Layout>
       )}
