@@ -8,21 +8,12 @@ import FooterTop from "@layout/footer/FooterTop";
 import MobileFooter from "@layout/footer/MobileFooter";
 import FeatureCard from "@component/feature-card/FeatureCard";
 import NavBarTop from "./navbar/NavBarTop";
-import { Helmet } from "react-helmet";
-import { FacebookProvider, Like } from "react-facebook";
 
 const Layout = ({ title, description, children }) => {
   return (
     <>
       <ToastContainer />
-      <FacebookProvider appId="107771938626773">
-        <Like
-          href="http://www.facebook.com"
-          colorScheme="dark"
-          showFaces
-          share
-        />
-      </FacebookProvider>
+  
       <div className="font-sans">
         <Head>
           <title>

@@ -150,12 +150,12 @@ const NavbarPromo = () => {
                 &nbsp;<i className="fas fa-angle-down"></i>
               </button>
               <div className="dropdown-content">
-                {data.map((language, i) => {
+                {data?.map((language, i) => {
                   return (
                     <Link
                       key={i + 1}
-                      href="/"
-                      locale={`${language.language_code}`}
+                      href=""
+                      locale={`${language.iso_code}`}
                     >
                       <a onClick={() => setCurrentLang(language)}>
                         <div

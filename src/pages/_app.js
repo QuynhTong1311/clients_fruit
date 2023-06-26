@@ -9,20 +9,11 @@ import { UserProvider } from "@context/UserContext";
 import DefaultSeo from "@component/common/DefaultSeo";
 import { SidebarProvider } from "@context/SidebarContext";
 const stripePromise = getStripe();
-import { FacebookProvider, Like } from "react-facebook";
-
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}>
-        <FacebookProvider appId="107771938626773">
-          <Like
-            href="http://www.facebook.com"
-            colorScheme="dark"
-            showFaces
-            share
-          />
-        </FacebookProvider>
+        
         <UserProvider>
           <SidebarProvider>
             <Elements stripe={stripePromise}>

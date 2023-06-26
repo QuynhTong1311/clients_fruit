@@ -12,6 +12,7 @@ import SettingServices from "@services/SettingServices";
 
 const Coupon = ({ couponInHome }) => {
   const { lang } = useTranslation("ns1");
+  const { t } = useTranslation();
   const [copiedCode, setCopiedCode] = useState("");
   const [copied, setCopied] = useState(false);
 
@@ -33,7 +34,7 @@ const Coupon = ({ couponInHome }) => {
           <span> {error}</span>
         </p>
       ) : couponInHome ? (
-        data?.slice(0, 2).map((coupon) => (
+        data?.slice(0, 2)?.map((coupon) => (
           <div
             key={coupon._id}
             className="coupon coupon-home mx-4 my-5 block md:flex lg:flex md:justify-between lg:justify-between items-center bg-white rounded-md shadow"
@@ -131,7 +132,7 @@ const Coupon = ({ couponInHome }) => {
                     </div>
                   </div>
                   <p className="text-xs leading-4 text-gray-500 mt-2">
-                    * This coupon apply when shopping more then{" "}
+                    {t("common:coupondiscription")}{" "}
                     <span className="font-bold">
                       {new Intl.NumberFormat({
                         style: "currency",

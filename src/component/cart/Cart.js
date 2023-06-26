@@ -11,9 +11,11 @@ import { UserContext } from "@context/UserContext";
 import { SidebarContext } from "@context/SidebarContext";
 import SettingServices from "@services/SettingServices";
 import useAsync from "@hooks/useAsync";
+import useTranslation from "next-translate/useTranslation";
 
 const Cart = () => {
   const router = useRouter();
+  const { t } = useTranslation();
   const [modalOpen, setModalOpen] = useState(false);
   const { isEmpty, items, cartTotal } = useCart();
   const { toggleCartDrawer, closeCartDrawer } = useContext(SidebarContext);
@@ -61,7 +63,7 @@ const Cart = () => {
             <span className="text-xl mr-2 mb-1">
               <IoBagCheckOutline />
             </span>
-            Shopping Cart
+            {t("common:shoppingCartDrawerTitle")}
           </h2>
           <button
             onClick={closeCartDrawer}
@@ -69,7 +71,7 @@ const Cart = () => {
           >
             <IoClose />
             <span className="font-sens text-sm text-gray-500 hover:text-red-400 ml-1">
-              Close
+              {t("common:closeBtn")}
             </span>
           </button>
         </div>
