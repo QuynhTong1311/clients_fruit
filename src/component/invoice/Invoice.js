@@ -41,15 +41,14 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
           <div className="lg:text-right text-left">
             <h2 className="text-lg font-serif font-semibold mt-4 lg:mt-0 md:mt-0">
               <Link href="/">
-                <div className='flex'>
-                  <FiSend className='text-4xl' />
-                  <h6 className='ml-2 text-3xl'>Daraz</h6>
+                <div className="flex">
+                  <FiSend className="text-4xl" />
+                  <h6 className="ml-2 text-3xl">Daraz</h6>
                 </div>
               </Link>
             </h2>
             <p className="text-sm text-gray-500">
-              {globalSetting?.address ||
-                "38 Phan Đình Phùng P8 - TPVL "}
+              {globalSetting?.address || "38 Phan Đình Phùng P8 - TPVL "}
             </p>
           </div>
         </div>
@@ -148,8 +147,15 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
               Shipping Cost
             </span>
             <span className="text-sm text-gray-500 font-semibold font-serif block">
-              {currency}
-              {parseFloat(data.shippingCost).toFixed(2)}
+              {coupon?.discountType?.type === "fixed" ? (
+                <span>
+                  {new Intl.NumberFormat({
+                    style: "currency",
+                    currency: "VND",
+                  }).format(data.shippingCost * 23000)}{" "}
+                  VNĐ
+                </span>
+              ): null}
             </span>
           </div>
           <div className="mb-3 md:mb-0 lg:mb-0  flex flex-col sm:flex-wrap">
@@ -169,7 +175,7 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
               {new Intl.NumberFormat({
                 style: "currency",
                 currency: "VND",
-              }).format((data.total) * 23000)}{" "}
+              }).format(data.total * 23000)}{" "}
               VNĐ
             </span>
           </div>
